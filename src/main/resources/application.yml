@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: forevergl..
+    url: jdbc:mysql://localhost:3306/shopping?serverTimezone=UTC
+    username: root
+    type: com.alibaba.druid.pool.DruidDataSource
+  application:
+    name: Cola
+server:
+  port: 8008
+  servlet:
+    context-path: /api
+mybatis:
+  type-aliases-package: com.longxingyu.pojo
+  mapper-locations: classpath:mappers/*xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

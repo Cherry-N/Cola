@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.longxingyu.mapper.GoodsMapper">
+    <update id="collectN">
+        update shopping.goods set collect = 0 where id in
+        <foreach collection="fid" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </update>
+    <update id="walkN">
+        update shopping.goods set walk = 0 where id in
+        <foreach collection="fid" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </update>
+    <update id="shopN">
+        update shopping.goods set shopcar = 0 where id in
+        <foreach collection="fid" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </update>
+    <update id="buyN">
+        update shopping.goods
+        set buy = 0
+        where id in
+        <foreach collection="fid" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </update>
+</mapper>
