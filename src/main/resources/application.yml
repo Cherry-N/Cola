@@ -8,7 +8,7 @@ spring:
   application:
     name: Cola
 server:
-  port: 8008
+  port: 8080
   servlet:
     context-path: /api
 mybatis:
