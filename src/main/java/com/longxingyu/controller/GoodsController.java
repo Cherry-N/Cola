@@ -24,7 +24,7 @@ public class GoodsController {
     @Autowired
     private GoodsService goodsService;
 
-    @GetMapping()
+    @GetMapping( "get")
     public Result getGoods() {
         List<Goods> goods = goodsService.getGoods();
         return ResultUtil.returntResultGet(goods);
